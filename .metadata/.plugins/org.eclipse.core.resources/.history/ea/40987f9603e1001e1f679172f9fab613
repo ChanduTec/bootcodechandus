@@ -1,0 +1,11 @@
+package com.example.ashokit.entity;
+
+import java.io.Serializable;
+
+public class Courses implements Serializable {
+
+	 private Integer couseId;
+	 private String cousrseName;
+	 
+	 private Douuble coursefee;
+}

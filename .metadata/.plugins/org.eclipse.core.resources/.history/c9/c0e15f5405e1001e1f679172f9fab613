@@ -1,0 +1,31 @@
+package com.example.ashokit.entity;
+
+import java.io.Serializable;
+import java.util.List;
+
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "studentRelation")
+public class Student implements Serializable {
+
+	private Integer studentId;
+	private String studentName;
+	private String studentAddress;
+
+	// one student many coursses
+
+	@OneToMany(mappedBy = "student", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	private List<Courses> courses;
+
+	@Override
+	public String toString() {
+		return "Student [studentId=" + studentId + ", studentName=" + studentName + ", studentAddress=" + studentAddress
+				+ "]";
+	}
+
+}

@@ -1,0 +1,20 @@
+package com.example.ashokit.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.ashokit.entity.ExcelEntity;
+import com.example.ashokit.repo.ExcelRepository;
+
+@Service
+public class ExcelService {
+
+	@Autowired
+	private ExcelRepository excelRepository;
+
+	public void saveData(ExcelEntity entity) {
+
+		
+		   
+	}
+}

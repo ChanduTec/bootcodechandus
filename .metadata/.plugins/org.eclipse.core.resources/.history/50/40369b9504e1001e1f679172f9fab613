@@ -1,0 +1,16 @@
+package com.example.ashokit.entity;
+
+import java.io.Serializable;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "Coursesrelation")
+public class Courses implements Serializable {
+
+	private Integer couseId;
+	private String cousrseName;
+	private Double coursefee;
+
+}

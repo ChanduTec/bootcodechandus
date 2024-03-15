@@ -1,0 +1,24 @@
+package com.example.ashokit.restcontroller;
+
+import org.springframework.stereotype.Service;
+
+import com.example.ashokit.repository.CoursesRepository;
+import com.example.ashokit.repository.StudentRepository;
+
+@Service
+public class StudentService {
+
+	private StudentRepository studentReposi;
+
+	private CoursesRepository coursesRepository;
+
+	private StudentService(StudentRepository studentRepository, CoursesRepository coursesRepository) {
+		this.coursesRepository = coursesRepository;
+		this.studentRepository = studentRepository;
+	}
+
+	public void saveData() {
+
+	}
+
+}

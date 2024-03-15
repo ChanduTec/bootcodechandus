@@ -1,0 +1,53 @@
+package com.example.ashokit.restcontroller;
+
+import java.util.Arrays;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.ashokit.entity.Courses;
+import com.example.ashokit.entity.Student;
+import com.example.ashokit.repository.CoursesRepository;
+import com.example.ashokit.repository.StudentRepository;
+
+@Service
+public class StudentService {
+	@Autowired
+	private StudentRepository studentReposi;
+	@Autowired
+	private CoursesRepository coursesReposit;
+
+	private StudentService(StudentRepository studentService, CoursesRepository coursesRepository) {
+		this.studentReposi = studentService;
+		this.coursesReposit = coursesRepository;
+
+	}
+
+	public void saveData() {
+
+		Student student = new Student();
+		student.setStudentAddress("Hyderabad");
+		student.setStudentName("AshokIt");
+		student.setStudentId(36);
+
+		Courses courses = new Courses();
+		courses.setCoursefee(13455.66);
+		courses.setCousrseName("Java");
+		courses.setStudent(student);
+		courses.setCouseId(20);
+
+		courses.setCoursefee(54678.66);
+		courses.setCousrseName("ProjectBatch");
+		courses.setStudent(student);
+		courses.setCouseId(36);
+
+		student.setCourses(Arrays.asList(courses));
+
+		studentReposi.save(student);
+
+		System.out.println(student);
+		System.out.println(courses);
+
+	}
+
+}

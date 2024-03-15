@@ -1,0 +1,27 @@
+package com.example.ashokit.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.ashokit.entity.ExcelEntity;
+import com.example.ashokit.repo.ExcelRepository;
+
+@Service
+public class ExcelService {
+
+	@Autowired
+	private ExcelRepository excelRepository;
+
+	public void saveData(ExcelEntity entity) {
+
+		excelRepository.save(entity);
+
+	}
+
+	public List<ExcelEntity> getallData() {
+		List<ExcelEntity> findAll = excelRepository.findAll();
+		return findAll;
+	}
+}

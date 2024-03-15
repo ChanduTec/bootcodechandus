@@ -1,0 +1,27 @@
+package com.example.demo.service;
+
+import java.util.ArrayList;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.entity.Passport;
+import com.example.demo.entity.Person;
+import com.example.demo.repository.PassportRepository;
+import com.example.demo.repository.PersonRepository;
+
+@Service
+public class PersonServivce<E> {
+	@Autowired
+	private PersonRepository personRepository;
+
+	@Autowired
+	private PassportRepository passportRepository;
+	
+	public void savePerson() {
+		
+		ArrayList<Person> arrayList = new ArrayList<>();
+		
+		arrayList.add(new Person(123, "chandu", "Male", new Passport(4345, 22-04-2023, null, null, null)))
+	}
+}

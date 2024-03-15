@@ -1,0 +1,17 @@
+package com.example.ashokit.repo;
+
+import java.io.Serializable;
+import java.util.List;
+
+import org.springframework.data.jpa.domain.Specification;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.example.ashokit.entity.FlipKart;
+
+@Repository
+public interface FlipKartRepo extends JpaRepository<FlipKart, Serializable> {
+
+	List<FlipKart> getListByPriceManagment(Double price, Double pDouble);
+	public List<FlipKart> findAll(Specification<FlipKart> spec);
+}

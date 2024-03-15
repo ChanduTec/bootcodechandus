@@ -1,0 +1,14 @@
+package com.example.ashokit;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SpecificationsInDataJpaApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpecificationsInDataJpaApplication.class, args);
+		System.out.println("Welcomr to the data specifications");
+	}
+
+}

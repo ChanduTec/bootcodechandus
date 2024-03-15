@@ -1,0 +1,17 @@
+package com.example.ashokit.service;
+
+import java.util.ArrayList;
+
+import org.springframework.stereotype.Service;
+
+import com.example.ashokit.entity.PdfEntity;
+
+@Service
+public class PdfService {
+	
+	public void saveDatainBB() {
+		
+		ArrayList<PdfEntity> arrayList = new ArrayList<>();
+	}
+
+}

@@ -1,0 +1,63 @@
+package com.example.ashokit.entity;
+
+import java.io.Serializable;
+
+import com.lowagie.text.pdf.PdfPCell;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
+public class PdfEntity implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	@Id
+	private Integer pdfId;
+	private String pdfName;
+	private PdfPCell pdfPages;
+
+	public Integer getPdfId() {
+		return pdfId;
+	}
+
+	public void setPdfId(Integer pdfId) {
+		this.pdfId = pdfId;
+	}
+
+	public String getPdfName() {
+		return pdfName;
+	}
+
+	public void setPdfName(String pdfName) {
+		this.pdfName = pdfName;
+	}
+
+	public PdfPCell getPdfPages() {
+		return pdfPages;
+	}
+
+	public void setPdfPages(PdfPCell pdfPages) {
+		this.pdfPages = pdfPages;
+	}
+
+	public PdfEntity(Integer pdfId, String pdfName, PdfPCell pdfPages) {
+		super();
+		this.pdfId = pdfId;
+		this.pdfName = pdfName;
+		this.pdfPages = pdfPages;
+	}
+
+	public PdfEntity() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public String toString() {
+		return "PdfEntity [pdfId=" + pdfId + ", pdfName=" + pdfName + ", pdfPages=" + pdfPages + "]";
+	}
+
+}

@@ -1,0 +1,90 @@
+package com.example.demo.entity;
+
+import java.util.Date;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;
+
+@Entity
+@Table
+public class Passport {
+
+	@Id
+	private Integer passportId;
+	private Integer passportNumber;
+	private Date validDate;
+	private String passportIssuedArea;
+
+	@OneToOne
+	@JoinColumn(name = "personId")
+	private Person person;
+	
+	
+
+	public Passport() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Passport(Integer passportId, Integer passportNumber, Date validDate, String passportIssuedArea,
+			Person person) {
+		super();
+		this.passportId = passportId;
+		this.passportNumber = passportNumber;
+		this.validDate = validDate;
+		this.passportIssuedArea = passportIssuedArea;
+		this.person = person;
+	}
+
+	public Integer getPassportId() {
+		return passportId;
+	}
+
+	public void setPassportId(Integer passportId) {
+		this.passportId = passportId;
+	}
+
+	public Integer getPassportNumber() {
+		return passportNumber;
+	}
+
+	public void setPassportNumber(Integer passportNumber) {
+		this.passportNumber = passportNumber;
+	}
+
+	public Date getValidDate() {
+		return validDate;
+	}
+
+	public void setValidDate(Date validDate) {
+		this.validDate = validDate;
+	}
+
+	public String getPassportIssuedArea() {
+		return passportIssuedArea;
+	}
+
+	public void setPassportIssuedArea(String passportIssuedArea) {
+		this.passportIssuedArea = passportIssuedArea;
+	}
+
+	public Person getPerson() {
+		return person;
+	}
+
+	public void setPerson(Person person) {
+		this.person = person;
+	}
+
+	@Override
+	public String toString() {
+		return "Passport [passportId=" + passportId + ", passportNumber=" + passportNumber + ", validDate=" + validDate
+				+ ", passportIssuedArea=" + passportIssuedArea + "]";
+	}
+
+	
+
+}

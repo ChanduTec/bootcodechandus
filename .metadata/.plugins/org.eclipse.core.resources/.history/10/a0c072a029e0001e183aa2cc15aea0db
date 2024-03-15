@@ -1,0 +1,19 @@
+package com.example.demo.entity;
+
+import java.util.Date;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table
+public class Passport {
+
+	@Id
+	private Integer passportId;
+	private Integer passportNumber;
+	private Date validDate;
+	private String passportIssuedArea;
+
+}

@@ -1,0 +1,21 @@
+package com.example.ashokit.entity;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
+public class ExcelEntity {
+
+	@Id
+	private Integer excelId;
+	private String excelName;
+	private Integer excelPages;
+	public ExcelEntity(Integer excelId, String excelName, Integer excelPages) {
+		super();
+		this.excelId = excelId;
+		this.excelName = excelName;
+		this.excelPages = excelPages;
+	}
+
+	
+}

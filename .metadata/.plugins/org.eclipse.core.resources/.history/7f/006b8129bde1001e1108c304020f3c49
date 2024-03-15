@@ -1,0 +1,30 @@
+package com.example.ashokit.service;
+
+import java.util.ArrayList;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.ashokit.entity.FlipKart;
+import com.example.ashokit.repo.FlipKartRepo;
+
+@Service
+public class FlipKartService {
+	
+	@Autowired
+	private FlipKartRepo flipKartRepo;
+
+	
+	public void saveData() {
+		
+		ArrayList<FlipKart> flipKartsData = new  ArrayList<>();
+		flipKartsData.add(new FlipKart(123, "Mi", 3455.66, "Hyderabad"));
+		flipKartsData.add(new FlipKart(13, "Lenovo", 6645567.543, "Pune"));
+		flipKartsData.add(new FlipKart(23, "Apple", 8765.43, "Bng"));
+		flipKartsData.add(new FlipKart(154, "Andriod", 456645.65, "Spl"));
+		flipKartsData.add(new FlipKart(98, "Mi", 3243.66, "Khammam"));
+		flipKartsData.add(new FlipKart(345, "EarPhones", 98898799.66, "Vijayawada"));
+		
+		
+	}
+}

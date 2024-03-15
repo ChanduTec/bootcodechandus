@@ -1,0 +1,31 @@
+package com.example.ashokit.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.ashokit.entity.ExcelEntity;
+import com.example.ashokit.service.ExcelService;
+
+@RestController
+public class ExcelController {
+	@Autowired
+	private ExcelService excelService;
+
+	@GetMapping(value = "excel")
+	public String welcome() {
+		return "welcome to the excel chandu";
+	}
+
+	@PostMapping(value = "/save")
+	public ResponseEntity<ExcelEntity> saveData(@RequestBody ExcelEntity excelEntity) {
+		excelService.saveData(excelEntity);
+		System.out.println("Data is saved");
+		System.out.println(excelEntity);
+		return new ResponseEntity<ExcelEntity>(HttpStatus.CREATED);
+	}
+}

@@ -1,0 +1,25 @@
+package com.example.ashokit;
+
+import java.util.List;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
+import com.example.ashokit.entity.FlipKart;
+import com.example.ashokit.service.FlipKartService;
+
+@SpringBootApplication
+public class SpecificationsInDataJpaApplication {
+
+	public static void main(String[] args) {
+		ConfigurableApplicationContext applicationContext = SpringApplication.run(SpecificationsInDataJpaApplication.class, args);
+		System.out.println("Welcomr to the data specifications");
+		FlipKartService flipKartService = applicationContext.getBean(FlipKartService.class);
+	     // flipKartService.saveData();
+	     List<FlipKart> dataBasedOnPrice = flipKartService.getDataBasedOnPrice();
+	     System.out.println("Getting data based on price");
+	     dataBasedOnPrice.forEach(System.out::println);
+	}
+
+}

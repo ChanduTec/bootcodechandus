@@ -1,0 +1,23 @@
+package com.example.ashokit.controloer;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.ashokit.repository.PdfRepository;
+import com.example.ashokit.service.PdfService;
+
+@RestController
+public class PdfController {
+
+	@Autowired
+	private PdfService pdfservice;
+	@Autowired
+	private PdfRepository pdfRepository;
+
+	@GetMapping(value = "/getpage")
+	public String getData() {
+		return "welcome to the pdf";
+	}
+
+}

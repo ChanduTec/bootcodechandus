@@ -1,0 +1,11 @@
+package com.example.ashokit.repo;
+
+import java.io.Serializable;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.ashokit.entity.FlipKart;
+
+public interface FlipKartRepo extends JpaRepository<FlipKart, Serializable> {
+
+}

@@ -1,0 +1,12 @@
+package com.example.ashokit.controloer;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class PdfController {
+
+	
+	 public String getData() {
+		 return "welcome to the pdf";
+	 }
+}

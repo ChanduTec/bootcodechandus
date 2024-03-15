@@ -1,0 +1,21 @@
+package com.example.ashokit.service;
+
+import java.util.ArrayList;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.ashokit.repo.FlipKartRepo;
+
+@Service
+public class FlipKartService {
+	
+	@Autowired
+	private FlipKartRepo flipKartRepo;
+
+	
+	public void saveData() {
+		
+		new  ArrayList<>();
+	}
+}

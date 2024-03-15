@@ -1,0 +1,11 @@
+package com.example.demo.entity;
+
+import java.util.Date;
+
+public class Passport {
+
+	private Integer passportId;
+	private Date validDate;
+	private String passportIssuedArea;
+	
+}

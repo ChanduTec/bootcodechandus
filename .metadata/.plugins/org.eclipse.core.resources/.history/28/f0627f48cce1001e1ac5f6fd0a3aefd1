@@ -1,0 +1,12 @@
+package com.example.ashokit.entity;
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class PdfEntity {
+
+	private Integer pdfId;
+	private String pdfName;
+	private Integer pdfPages;
+	
+}

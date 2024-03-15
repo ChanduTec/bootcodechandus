@@ -1,0 +1,61 @@
+package com.example.demo.entity;
+
+import org.springframework.data.annotation.Id;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table
+public class Person {
+
+	@Id
+	private Integer personId;
+	private String personeName;
+	private String gender;
+
+	public Integer getPersonId() {
+		return personId;
+	}
+
+	public void setPersonId(Integer personId) {
+		this.personId = personId;
+	}
+
+	public String getPersoneName() {
+		return personeName;
+	}
+
+	public void setPersoneName(String personeName) {
+		this.personeName = personeName;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public Person() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Person(Integer personId, String personeName, String gender) {
+		super();
+		this.personId = personId;
+		this.personeName = personeName;
+		this.gender = gender;
+	}
+
+	@Override
+	public String toString() {
+		return "Person [personId=" + personId + ", personeName=" + personeName + ", gender=" + gender
+				+ ", getPersonId()=" + getPersonId() + ", getPersoneName()=" + getPersoneName() + ", getGender()="
+				+ getGender() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()="
+				+ super.toString() + "]";
+	}
+
+}
