@@ -1,0 +1,1 @@
+Specifications means to develop the customs querys we need to use,bcz @Query annotations  we  can't achive all the logics.so we can gpo with the Specifications.
